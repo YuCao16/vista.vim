@@ -20,7 +20,8 @@ syntax match VistaScopeKind /\S\+\zs \a\+\ze:\d\+$/ nextgroup=VistaColon
 syntax match VistaColon /:\ze\d\+$/ contained nextgroup=VistaLineNr
 syntax match VistaLineNr /\d\+$/
 syntax match VistaScope /^\S.*$/ contains=VistaPrivate,VistaProtected,VistaPublic,VistaKind,VistaIcon,VistaParenthesis
-syntax region VistaTag start="^" end="$" contains=VistaPublic,VistaProtected,VistaPrivate,VistaArgs,VistaScope,VistaScopeKind,VistaLineNr,VistaColon,VistaIcon
+" syntax region VistaTag start="^" end="$" contains=VistaPublic,VistaProtected,VistaPrivate,VistaArgs,VistaScope,VistaScopeKind,VistaLineNr,VistaColon,VistaIcon
+syntax region VistaTag start="^" end="$" contains=VistaPublic,VistaProtected,VistaPrivate,VistaScope,VistaScopeKind,VistaLineNr,VistaColon,VistaIcon
 syntax match VistaSignature  '\(\<operator *( *) *\)\?\zs(.*)\ze'
 
 hi default link VistaParenthesis Operator
