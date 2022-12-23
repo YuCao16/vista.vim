@@ -21,6 +21,7 @@ syntax match VistaColon /:\ze\d\+$/ contained nextgroup=VistaLineNr
 syntax match VistaLineNr /\d\+$/
 syntax match VistaScope /^\S.*$/ contains=VistaPrivate,VistaProtected,VistaPublic,VistaKind,VistaIcon,VistaParenthesis
 syntax region VistaTag start="^" end="$" contains=VistaPublic,VistaProtected,VistaPrivate,VistaArgs,VistaScope,VistaScopeKind,VistaLineNr,VistaColon,VistaIcon
+syntax match VistaSignature  '\(\<operator *( *) *\)\?\zs(.*)\ze'
 
 hi default link VistaParenthesis Operator
 hi default link VistaScope       Function
@@ -31,6 +32,7 @@ hi default link VistaLineNr      LineNr
 hi default link VistaColon       SpecialKey
 hi default link VistaIcon        StorageClass
 hi default link VistaArgs        Comment
+hi default link VistaSignature   Comment
 
 hi default VistaPublic     guifg=Green  ctermfg=Green
 hi default VistaProtected  guifg=Yellow ctermfg=Yellow
