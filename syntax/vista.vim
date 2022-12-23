@@ -40,14 +40,8 @@
 " hi default VistaProtected  guifg=Yellow ctermfg=Yellow
 " hi default VistaPrivate    guifg=Red    ctermfg=Red
 "
-" " Do not touch the global highlight group.
-" " hi! link Folded Function
 "
-" if has('nvim')
-"   call setwinvar(winnr(), '&winhl', 'Folded:Function')
-" endif
-"
-" let b:current_syntax = 'vista'
+
 " Copyright (c) 2019 Liu-Cheng Xu
 " MIT License
 " vim: ts=2 sw=2 sts=2 et
@@ -83,5 +77,12 @@ hi default link VistaArgs        Comment
 hi default VistaAccessPublic     guifg=Green  ctermfg=Green
 hi default VistaAccessProtected  guifg=Yellow ctermfg=Yellow
 hi default VistaAccessPrivate    guifg=Red    ctermfg=Red
+
+" Do not touch the global highlight group.
+" hi! link Folded Function
+
+if has('nvim')
+  call setwinvar(winnr(), '&winhl', 'Folded:Function')
+endif
 
 let b:current_syntax = 'vista'
