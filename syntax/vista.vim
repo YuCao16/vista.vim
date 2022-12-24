@@ -58,7 +58,8 @@ syntax match VistaLineNr /\d\+$/
 syntax match VistaScopeKind /\S\+\zs \a\+\ze:\d\+$/ nextgroup=VistaColon
 syntax match VistaKind / \a*\ze:\d\+$/ contained
 syntax match VistaScope /^\S.*$/ contains=VistaPrivate,VistaProtected,VistaPublic,VistaKind,VistaIcon,VistaParenthesis
-syntax region VistaTag start="^" end="$" contains=VistaLineNr,VistaScope,VistaPrivate,VistaProtected,VistaPublic,VistaArgs,VistaScopeKind,VistaColon,VistaKind,VistaIcon
+syntax region VistaTag start="^" end="$" contains=VistaLineNr,VistaPrivate,VistaProtected,VistaPublic,VistaArgs,VistaScopeKind,VistaColon,VistaKind,VistaIcon
+" syntax region VistaTag start="^" end="$" contains=VistaLineNr,VistaScope,VistaPrivate,VistaProtected,VistaPublic,VistaArgs,VistaScopeKind,VistaColon,VistaKind,VistaIcon
 " syntax match VistaColon /:/ contained
 " syntax match VistaScopeKind /: .*$/ contains=VistaArgs,VistaColon,VistaLineNr
 " syntax match VistaKind / \a*:\d*$/
