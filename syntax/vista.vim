@@ -65,7 +65,6 @@ syntax match VistaScope /^\S.*$/ contains=VistaPrivate,VistaProtected,VistaPubli
 syntax region VistaTag start="^" end="$" contains=VistaLineNr,VistaScope,VistaPrivate,VistaProtected,VistaPublic,VistaArgs,VistaScopeKind,VistaColon,VistaKind,VistaIcon
 
 hi default link VistaScope       Function
-hi default link VistaTag         Keyword
 hi default link VistaKind        Type
 hi default link VistaScopeKind   Define
 hi default link VistaLineNr      LineNr
