@@ -37,7 +37,7 @@ function! vista#highlight#Add(lnum, ensure_visible, tag) abort
     endif
     " let [_, end, _] = matchstrpos(cur_line, '\\(:\d\+$')
     " let [_, end, _] = matchstrpos(cur_line, '\\($|:\d\+$')
-    let [_, end, _] = matchstrpos(cur_line, '\\($')
+    let [_, end, _] = matchstrpos(cur_line, '\\(')
     let hi_pos = [a:lnum, start+1, end]
   endif
 
