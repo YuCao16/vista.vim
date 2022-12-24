@@ -23,7 +23,7 @@ function! vista#highlight#Add(lnum, ensure_visible, tag) abort
     let cur_line = getline(a:lnum)
     " Current line may contains +,-,~, use `\S` is incorrect to find the right
     " starting postion.
-    let [_, start, _] = matchstrpos(cur_line, '[a-zA-Z0-9_,#:]')
+    let [_, start, _] = matchstrpos(cur_line, '[a-zA-Z0-9/(,#:]')
 
     " If we know the tag, then what we have to do is to use the length of tag
     " based on the starting point.
@@ -33,8 +33,7 @@ function! vista#highlight#Add(lnum, ensure_visible, tag) abort
       let hi_pos = [a:lnum, start+1, strlen(a:tag)]
     else
       let [_, end, _] = matchstrpos(cur_line, ':\d\+$')
-      " let hi_pos = [a:lnum, start+1, end - start]
-      let hi_pos = [a:lnum, start+1, end]
+      let hi_pos = [a:lnum, start+1, end - start]
     endif
   endif
 
