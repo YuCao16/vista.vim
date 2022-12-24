@@ -45,7 +45,8 @@ endif
 let icons = join(values(g:vista#renderer#icons), '\|')
 execute 'syntax match VistaIcon' '/'.icons.'/' 'contained'
 
-syntax match VistaPublic /.*+/ contained
+syntax match VistaPublic /^\s*+\</ contained
+" syntax match VistaPublic /.*+/ contained
 syntax match VistaProtected /^\s*\#\</ contained
 syntax match VistaPrivate /^\s*-\</ contained
 
