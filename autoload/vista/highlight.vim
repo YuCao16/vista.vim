@@ -35,7 +35,7 @@ function! vista#highlight#Add(lnum, ensure_visible, tag) abort
       let [_, end, _] = matchstrpos(cur_line, ':\d\+$')
       let hi_pos = [a:lnum, start+1, end - start]
     endif
-    let [_, end, _] = matchstrpos(cur_line, ':\(\d\+$')
+    let [_, end, _] = matchstrpos(cur_line, ':\d\(\+$')
     let hi_pos = [a:lnum, start+1, end - start]
   endif
 
