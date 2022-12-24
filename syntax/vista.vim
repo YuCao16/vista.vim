@@ -68,7 +68,7 @@ hi default link VistaIcon        StorageClass
 hi default link VistaArgs        Comment
 
 hi default VistaPublic     guifg=Green  ctermfg=Green
-hi default VistaProtected  guifg=Yellow ctermfg=Yellow
+hi default VistaProtected  guifg=Blue ctermfg=Blue
 hi default VistaPrivate    guifg=Red    ctermfg=Red
 
 " Do not touch the global highlight group.
