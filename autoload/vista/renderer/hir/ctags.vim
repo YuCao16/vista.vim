@@ -8,7 +8,7 @@ let s:scope_icon = ['⊕', '⊖']
 
 let s:visibility_icon = {
       \ 'public': '+',
-      \ 'protected': '~',
+      \ 'protected': '#',
       \ 'private': '-',
       \ }
 
