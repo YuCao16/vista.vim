@@ -58,8 +58,8 @@ syntax match VistaLineNr /\d\+$/
 syntax match VistaScopeKind /\S\+\zs \a\+\ze:\d\+$/ nextgroup=VistaColon
 syntax match VistaKind / \a*\ze:\d\+$/ contained
 syntax match VistaScope /^\S.*$/ contains=VistaPrivate,VistaProtected,VistaPublic,VistaKind,VistaIcon,VistaParenthesis
-" syntax region VistaTag start="^" end="$" contains=VistaLineNr,VistaScope,VistaPrivate,VistaProtected,VistaPublic,VistaArgs,VistaScopeKind,VistaColon,VistaKind,VistaIcon,VistaParenthesis
-syntax region VistaTag start="^" end="$" contains=VistaLineNr,VistaScope,VistaPrivate,VistaProtected,VistaPublic,VistaArgs,VistaColon,VistaKind,VistaIcon,VistaParenthesis
+syntax region VistaTag start="^" end="$" contains=VistaLineNr,VistaScope,VistaPrivate,VistaProtected,VistaPublic,VistaArgs,VistaScopeKind,VistaColon,VistaKind,VistaIcon,VistaParenthesis
+" syntax region VistaTag start="^" end="$" contains=VistaLineNr,VistaScope,VistaPrivate,VistaProtected,VistaPublic,VistaArgs,VistaColon,VistaKind,VistaIcon,VistaParenthesis
 " syntax match VistaColon /:/ contained
 " syntax match VistaScopeKind /: .*$/ contains=VistaArgs,VistaColon,VistaLineNr
 " syntax match VistaKind / \a*:\d*$/
@@ -67,10 +67,11 @@ syntax region VistaTag start="^" end="$" contains=VistaLineNr,VistaScope,VistaPr
 hi default link VistaScope       Function
 hi default link VistaKind        Type
 hi default link VistaScopeKind   Define
-hi default link VistaLineNr      LineNr
+hi default link VistaLineNr      Function
 hi default link VistaColon       SpecialKey
 hi default link VistaIcon        StorageClass
 hi default link VistaArgs        Comment
+" hi default link VistaLineNr      LineNr
 
 hi default VistaPublic     guifg=Green  ctermfg=Green
 hi default VistaProtected  guifg=Blue ctermfg=Blue
