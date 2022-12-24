@@ -37,7 +37,7 @@ function! vista#highlight#Add(lnum, ensure_visible, tag) abort
     endif
   endif
 
-  let w:vista_highlight_id = matchaddpos('IncSearch', [hi_pos])
+  let w:vista_highlight_id = matchaddpos('Visual', [hi_pos])
 
   if a:ensure_visible
     execute 'normal!' a:lnum.'z.'
