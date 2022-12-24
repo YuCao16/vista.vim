@@ -30,15 +30,13 @@ function! vista#highlight#Add(lnum, ensure_visible, tag) abort
     "
     " start is 0-based, while the column used in matchstrpos is 1-based.
     if !empty(a:tag)
-      let hi_pos = [a:lnum, start+1, strlen(a:tag)]
+      " let hi_pos = [a:lnum, start+1, strlen(a:tag)]
+      let [_, end, _] = matchstrpos(cur_line, '[(]')
+      let hi_pos = [a:lnum, start+1, end-2]
     else
       let [_, end, _] = matchstrpos(cur_line, ':\d\+$')
       let hi_pos = [a:lnum, start+1, end - start]
     endif
-    " let [_, end, _] = matchstrpos(cur_line, '\\(:\d\+$')
-    " let [_, end, _] = matchstrpos(cur_line, '\\($|:\d\+$')
-    let [_, end, _] = matchstrpos(cur_line, '[(]')
-    let hi_pos = [a:lnum, start+1, end]
   endif
 
   let w:vista_highlight_id = matchaddpos('Visual', [hi_pos])
