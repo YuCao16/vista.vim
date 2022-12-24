@@ -45,7 +45,6 @@ endif
 let icons = join(values(g:vista#renderer#icons), '\|')
 execute 'syntax match VistaIcon' '/'.icons.'/' 'contained'
 
-" syntax match VistaPublic /^\s*+\</ contained
 syntax match VistaPublic /.*+/ contained
 syntax match VistaProtected /^\s*\#\</ contained
 syntax match VistaPrivate /^\s*-\</ contained
@@ -56,7 +55,7 @@ syntax match VistaLineNr /\d\+$/
 syntax match VistaScopeKind /: .*$/ contains=VistaArgs,VistaColon,VistaLineNr
 syntax match VistaKind / \a*:\d*$/
 syntax match VistaScope /^\S.*$/ contains=VistaPrivate,VistaProtected,VistaPublic,VistaKind,VistaIcon
-syntax region VistaTag start="^" end="$" contains=VistaLineNr,VistaScope,VistaPrivate,VistaProtected,VistaPublic,VistaArgs,VistaScopeKind,VistaColon
+syntax region VistaTag start="^" end="$" contains=VistaLineNr,VistaScope,VistaPrivate,VistaProtected,VistaPublic,VistaArgs,VistaScopeKind,VistaColon,VistaKind,VistaIcon
 
 hi default link VistaScope       Function
 hi default link VistaTag         Keyword
