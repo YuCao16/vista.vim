@@ -46,6 +46,7 @@ function! s:OnBufDelete(bufnr) abort
 endfunction
 
 function! s:GenericAutoUpdate(event, bufnr, fpath) abort
+  return
   if vista#ShouldSkip()
     return
   endif
