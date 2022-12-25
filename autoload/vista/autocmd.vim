@@ -31,7 +31,7 @@ function! s:OnBufEnter(bufnr, fpath) abort
   endif
 
   call vista#Debug('event.BufEnter', a:bufnr, a:fpath)
-  call s:GenericAutoUpdate('BufEnter', a:bufnr, a:fpath)
+  " call s:GenericAutoUpdate('BufEnter', a:bufnr, a:fpath)
 endfunction
 
 function! s:OnBufDelete(bufnr) abort
@@ -46,7 +46,6 @@ function! s:OnBufDelete(bufnr) abort
 endfunction
 
 function! s:GenericAutoUpdate(event, bufnr, fpath) abort
-  return
   if vista#ShouldSkip()
     return
   endif
