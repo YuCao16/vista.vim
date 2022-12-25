@@ -31,7 +31,7 @@ function! s:OnBufEnter(bufnr, fpath) abort
   endif
 
   call vista#Debug('event.BufEnter', a:bufnr, a:fpath)
-  " call s:GenericAutoUpdate('BufEnter', a:bufnr, a:fpath)
+  call s:GenericAutoUpdate('BufEnter', a:bufnr, a:fpath)
 endfunction
 
 function! s:OnBufDelete(bufnr) abort
@@ -73,7 +73,7 @@ function! s:TriggerUpdate(event, bufnr, fpath) abort
     call add(s:did_open, a:bufnr)
   endif
 
-  call s:GenericAutoUpdate(a:event, a:bufnr, a:fpath)
+  " call s:GenericAutoUpdate(a:event, a:bufnr, a:fpath)
 endfunction
 
 function! s:AutoUpdateWithDelay(bufnr, fpath) abort
