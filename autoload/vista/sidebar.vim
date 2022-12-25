@@ -139,11 +139,11 @@ function! vista#sidebar#ToggleFocus() abort
     return
   endif
   let winnr = g:vista.winnr()
-  if winnr != winnr()
-    execute winnr.'wincmd w'
-  else
-    execute g:vista.source.get_winnr().'wincmd w'
-  endif
+  " if winnr != winnr()
+  "   execute winnr.'wincmd w'
+  " else
+  "   execute g:vista.source.get_winnr().'wincmd w'
+  " endif
 endfunction
 
 function! vista#sidebar#Toggle() abort

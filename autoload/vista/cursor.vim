@@ -240,9 +240,9 @@ function! vista#cursor#ShowTag() abort
 
   let winnr = g:vista.winnr()
 
-  if winnr() != winnr
-    execute winnr.'wincmd w'
-  endif
+  " if winnr() != winnr
+  "   execute winnr.'wincmd w'
+  " endif
 
   call cursor(s:vlnum, 1)
   normal! zz

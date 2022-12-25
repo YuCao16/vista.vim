@@ -18,11 +18,11 @@ else
   function! s:GotoSourceWindow() abort
     " g:vista.source.winnr is not always correct.
     let winnr = g:vista.source.get_winnr()
-    if winnr != -1
-      execute winnr.'wincmd w'
-    else
-      return vista#error#('Cannot find the target window')
-    endif
+    " if winnr != -1
+    "   execute winnr.'wincmd w'
+    " else
+    "   return vista#error#('Cannot find the target window')
+    " endif
   endfunction
 endif
 
