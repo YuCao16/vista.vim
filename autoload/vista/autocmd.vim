@@ -73,7 +73,7 @@ function! s:TriggerUpdate(event, bufnr, fpath) abort
     call add(s:did_open, a:bufnr)
   endif
 
-  call s:GenericAutoUpdate(a:event, a:bufnr, a:fpath)
+  " call s:GenericAutoUpdate(a:event, a:bufnr, a:fpath)
 endfunction
 
 function! s:AutoUpdateWithDelay(bufnr, fpath) abort
@@ -132,8 +132,8 @@ function! vista#autocmd#Init(group_name, AUF) abort
     " CursorHold and CursorHoldI event have been removed in order to
     " highlight the nearest tag automatically.
 
-    " autocmd BufReadPost  * call s:TriggerUpdate('BufReadPost', +expand('<abuf>'), fnamemodify(expand('<afile>'), ':p'))
-    " autocmd BufWritePost * call s:TriggerUpdate('BufWritePost', +expand('<abuf>'), fnamemodify(expand('<afile>'), ':p'))
+    autocmd BufReadPost  * call s:TriggerUpdate('BufReadPost', +expand('<abuf>'), fnamemodify(expand('<afile>'), ':p'))
+    autocmd BufWritePost * call s:TriggerUpdate('BufWritePost', +expand('<abuf>'), fnamemodify(expand('<afile>'), ':p'))
     autocmd BufEnter     * call s:OnBufEnter(+expand('<abuf>'), fnamemodify(expand('<afile>'), ':p'))
 
     autocmd BufDelete,BufWipeout * call s:OnBufDelete(+expand('<abuf>'))
