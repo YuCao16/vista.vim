@@ -133,7 +133,7 @@ function! vista#autocmd#Init(group_name, AUF) abort
     " highlight the nearest tag automatically.
 
     " autocmd BufReadPost  * call s:TriggerUpdate('BufReadPost', +expand('<abuf>'), fnamemodify(expand('<afile>'), ':p'))
-    autocmd BufWritePost * call s:TriggerUpdate('BufWritePost', +expand('<abuf>'), fnamemodify(expand('<afile>'), ':p'))
+    " autocmd BufWritePost * call s:TriggerUpdate('BufWritePost', +expand('<abuf>'), fnamemodify(expand('<afile>'), ':p'))
     autocmd BufEnter     * call s:OnBufEnter(+expand('<abuf>'), fnamemodify(expand('<afile>'), ':p'))
 
     autocmd BufDelete,BufWipeout * call s:OnBufDelete(+expand('<abuf>'))
