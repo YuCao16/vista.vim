@@ -68,7 +68,7 @@ function! vista#win#Execute(winnr, Run, ...) abort
 
   call call(a:Run, a:000)
 
-  if exists('l:switch_back')
-    noautocmd wincmd p
-  endif
+  " if exists('l:switch_back')
+  "   noautocmd wincmd p
+  " endif
 endfunction

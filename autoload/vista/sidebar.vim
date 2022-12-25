@@ -81,9 +81,9 @@ function! vista#sidebar#OpenOrUpdate(rows) abort
     unlet g:vista.lnum
   endif
 
-  if !g:vista_stay_on_open
-    wincmd p
-  endif
+  " if !g:vista_stay_on_open
+  "   wincmd p
+  " endif
 endfunction
 
 function! vista#sidebar#Close() abort
@@ -91,9 +91,9 @@ function! vista#sidebar#Close() abort
     let winnr = g:vista.winnr()
 
     " Jump back to the previous window if we are in the vista sidebar atm.
-    if winnr == winnr()
-      wincmd p
-    endif
+    " if winnr == winnr()
+    "   wincmd p
+    " endif
 
     if winnr != -1
       noautocmd execute winnr.'wincmd c'
